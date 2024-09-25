@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Product_button = new System.Windows.Forms.Button();
             this.TextBox_id_sel = new Guna.UI2.WinForms.Guna2TextBox();
             this.seller_button = new System.Windows.Forms.Button();
@@ -93,6 +93,7 @@
             this.TextBox_id_sel.SelectedText = "";
             this.TextBox_id_sel.Size = new System.Drawing.Size(200, 31);
             this.TextBox_id_sel.TabIndex = 23;
+            this.TextBox_id_sel.TextChanged += new System.EventHandler(this.TextBox_id_sel_TextChanged);
             // 
             // seller_button
             // 
@@ -108,6 +109,7 @@
             this.seller_button.TabIndex = 31;
             this.seller_button.Text = "Продавец";
             this.seller_button.UseVisualStyleBackColor = false;
+            this.seller_button.Click += new System.EventHandler(this.seller_button_Click);
             // 
             // selling_button
             // 
@@ -123,6 +125,7 @@
             this.selling_button.TabIndex = 33;
             this.selling_button.Text = "Продажи";
             this.selling_button.UseVisualStyleBackColor = false;
+            this.selling_button.Click += new System.EventHandler(this.selling_button_Click);
             // 
             // exit_button
             // 
@@ -160,26 +163,26 @@
             // 
             // dataGridView_product
             // 
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
-            this.dataGridView_product.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle28;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Sitka Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView_product.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dataGridView_product.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Sitka Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_product.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView_product.ColumnHeadersHeight = 24;
             this.dataGridView_product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Sitka Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView_product.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Sitka Display", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_product.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView_product.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridView_product.Location = new System.Drawing.Point(394, 80);
             this.dataGridView_product.Name = "dataGridView_product";
@@ -207,6 +210,7 @@
             this.dataGridView_product.ThemeStyle.RowsStyle.Height = 22;
             this.dataGridView_product.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridView_product.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridView_product.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_product_CellContentClick);
             this.dataGridView_product.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_product_CellMouseEnter);
             // 
             // label6
@@ -281,6 +285,7 @@
             this.TextBox_category.Size = new System.Drawing.Size(91, 30);
             this.TextBox_category.TabIndex = 12;
             this.TextBox_category.Text = "Пароль";
+            this.TextBox_category.Click += new System.EventHandler(this.TextBox_category_Click);
             // 
             // TextBox_ph_number_sel
             // 
@@ -301,6 +306,7 @@
             this.TextBox_ph_number_sel.SelectedText = "";
             this.TextBox_ph_number_sel.Size = new System.Drawing.Size(200, 31);
             this.TextBox_ph_number_sel.TabIndex = 11;
+            this.TextBox_ph_number_sel.TextChanged += new System.EventHandler(this.TextBox_ph_number_sel_TextChanged);
             // 
             // label4
             // 
@@ -314,6 +320,7 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Тел. номер";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // TextBox_age_sel
             // 
@@ -334,6 +341,7 @@
             this.TextBox_age_sel.SelectedText = "";
             this.TextBox_age_sel.Size = new System.Drawing.Size(200, 31);
             this.TextBox_age_sel.TabIndex = 9;
+            this.TextBox_age_sel.TextChanged += new System.EventHandler(this.TextBox_age_sel_TextChanged);
             // 
             // label2
             // 
@@ -346,6 +354,7 @@
             this.label2.Size = new System.Drawing.Size(93, 30);
             this.label2.TabIndex = 8;
             this.label2.Text = "Возраст";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // TextBox_name_sel
             // 
@@ -366,6 +375,7 @@
             this.TextBox_name_sel.SelectedText = "";
             this.TextBox_name_sel.Size = new System.Drawing.Size(200, 31);
             this.TextBox_name_sel.TabIndex = 7;
+            this.TextBox_name_sel.TextChanged += new System.EventHandler(this.TextBox_name_sel_TextChanged);
             // 
             // label1
             // 
@@ -378,6 +388,7 @@
             this.label1.Size = new System.Drawing.Size(58, 30);
             this.label1.TabIndex = 6;
             this.label1.Text = "Имя";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -390,6 +401,7 @@
             this.label3.Size = new System.Drawing.Size(35, 30);
             this.label3.TabIndex = 4;
             this.label3.Text = "ID";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Button_exit
             // 
@@ -434,6 +446,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(927, 593);
             this.panel1.TabIndex = 28;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // TextBox_psw_sel
             // 
@@ -454,6 +467,7 @@
             this.TextBox_psw_sel.SelectedText = "";
             this.TextBox_psw_sel.Size = new System.Drawing.Size(200, 31);
             this.TextBox_psw_sel.TabIndex = 26;
+            this.TextBox_psw_sel.TextChanged += new System.EventHandler(this.TextBox_psw_sel_TextChanged);
             // 
             // label5
             // 
@@ -467,6 +481,7 @@
             this.label5.Size = new System.Drawing.Size(183, 30);
             this.label5.TabIndex = 26;
             this.label5.Text = "Мини маркет бд";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // Seller_Form
             // 

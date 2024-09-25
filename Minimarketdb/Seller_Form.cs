@@ -194,5 +194,82 @@ namespace Minimarketdb
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void selling_button_Click(object sender, EventArgs e)
+        {
+            Selling_Form selling_Form = new Selling_Form();
+            selling_Form.Show();
+            this.Hide();
+        }
+
+        private void TextBox_id_sel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void seller_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView_product_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void TextBox_category_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_ph_number_sel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_age_sel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_name_sel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void TextBox_psw_sel_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

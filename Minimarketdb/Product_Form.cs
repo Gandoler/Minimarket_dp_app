@@ -271,5 +271,22 @@ namespace Minimarketdb
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void selling_button_Click(object sender, EventArgs e)
+        {
+            Selling_Form selling_Form = new Selling_Form();
+            selling_Form.Show();
+            this.Hide();
+        }
+
+        private void Button_exit_MouseEnter(object sender, EventArgs e)
+        {
+            Button_exit.ForeColor = Color.Red;
+        }
+
+        private void Button_exit_MouseLeave(object sender, EventArgs e)
+        {
+            Button_exit.ForeColor = Color.Black;
+        }
     }
 }
