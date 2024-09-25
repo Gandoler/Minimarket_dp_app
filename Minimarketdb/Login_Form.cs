@@ -84,5 +84,12 @@ namespace Minimarketdb
         {
             Application.Exit();
         }
+
+        private void Button_login_Click(object sender, EventArgs e)
+        {
+            Product_Form product_Form = new Product_Form();
+            product_Form.Show();
+            this.Hide();
+        }
     }
 }

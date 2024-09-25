@@ -314,6 +314,7 @@
             this.category_button.TabIndex = 20;
             this.category_button.Text = "Категория";
             this.category_button.UseVisualStyleBackColor = false;
+            this.category_button.Click += new System.EventHandler(this.category_button_Click);
             // 
             // refresh_button
             // 
@@ -345,6 +346,7 @@
             this.exit_button.TabIndex = 22;
             this.exit_button.Text = "Выход";
             this.exit_button.UseVisualStyleBackColor = false;
+            this.exit_button.Click += new System.EventHandler(this.exit_button_Click);
             // 
             // selling_button
             // 

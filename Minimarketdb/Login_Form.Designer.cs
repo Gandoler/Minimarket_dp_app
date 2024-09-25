@@ -157,6 +157,7 @@
             this.Button_login.Size = new System.Drawing.Size(145, 36);
             this.Button_login.TabIndex = 6;
             this.Button_login.Text = "Вход";
+            this.Button_login.Click += new System.EventHandler(this.Button_login_Click);
             // 
             // Button_exit
             // 

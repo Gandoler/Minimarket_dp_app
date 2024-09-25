@@ -81,6 +81,17 @@ namespace Minimarketdb
         {
             Application.Exit();
         }
-       
+
+        private void exit_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void category_button_Click(object sender, EventArgs e)
+        {
+            Category_Form category_Form = new Category_Form(); 
+            category_Form.Show();
+            this.Hide();
+        }
     }
 }

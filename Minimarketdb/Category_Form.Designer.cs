@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TextBox_id = new Guna.UI2.WinForms.Guna2TextBox();
             this.seller_button = new System.Windows.Forms.Button();
             this.selling_button = new System.Windows.Forms.Button();
-            this.exit_button = new System.Windows.Forms.Button();
             this.Product_button = new System.Windows.Forms.Button();
-            this.dataGridView_product = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.Update_button = new System.Windows.Forms.Button();
             this.Delete_button = new System.Windows.Forms.Button();
@@ -44,9 +45,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Button_exit = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView_category = new Guna.UI2.WinForms.Guna2DataGridView();
             this.TextBox_description = new Guna.UI2.WinForms.Guna2TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_product)).BeginInit();
+            this.button_leave = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_category)).BeginInit();
             this.SuspendLayout();
             // 
             // TextBox_id
@@ -99,21 +102,6 @@
             this.selling_button.Text = "Продажи";
             this.selling_button.UseVisualStyleBackColor = false;
             // 
-            // exit_button
-            // 
-            this.exit_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(67)))), ((int)(((byte)(90)))));
-            this.exit_button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exit_button.FlatAppearance.BorderSize = 0;
-            this.exit_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit_button.Font = new System.Drawing.Font("Corbel", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.exit_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(138)))), ((int)(((byte)(151)))));
-            this.exit_button.Location = new System.Drawing.Point(6, 580);
-            this.exit_button.Name = "exit_button";
-            this.exit_button.Size = new System.Drawing.Size(141, 63);
-            this.exit_button.TabIndex = 28;
-            this.exit_button.Text = "Выход";
-            this.exit_button.UseVisualStyleBackColor = false;
-            // 
             // Product_button
             // 
             this.Product_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(67)))), ((int)(((byte)(90)))));
@@ -128,15 +116,7 @@
             this.Product_button.TabIndex = 26;
             this.Product_button.Text = "Товары";
             this.Product_button.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView_product
-            // 
-            this.dataGridView_product.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView_product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_product.Location = new System.Drawing.Point(384, 92);
-            this.dataGridView_product.Name = "dataGridView_product";
-            this.dataGridView_product.Size = new System.Drawing.Size(528, 486);
-            this.dataGridView_product.TabIndex = 22;
+            this.Product_button.Click += new System.EventHandler(this.Product_button_Click);
             // 
             // label6
             // 
@@ -165,6 +145,7 @@
             this.Update_button.TabIndex = 16;
             this.Update_button.Text = "Update";
             this.Update_button.UseVisualStyleBackColor = false;
+            this.Update_button.Click += new System.EventHandler(this.Update_button_Click);
             // 
             // Delete_button
             // 
@@ -180,6 +161,7 @@
             this.Delete_button.TabIndex = 15;
             this.Delete_button.Text = "Delete";
             this.Delete_button.UseVisualStyleBackColor = false;
+            this.Delete_button.Click += new System.EventHandler(this.Delete_button_Click);
             // 
             // add_button
             // 
@@ -272,12 +254,14 @@
             this.Button_exit.TabIndex = 25;
             this.Button_exit.Text = "X";
             this.Button_exit.Click += new System.EventHandler(this.Button_exit_Click);
+            this.Button_exit.MouseEnter += new System.EventHandler(this.Button_exit_MouseEnter_1);
+            this.Button_exit.MouseLeave += new System.EventHandler(this.Button_exit_MouseLeave);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(167)))), ((int)(((byte)(176)))));
+            this.panel1.Controls.Add(this.dataGridView_category);
             this.panel1.Controls.Add(this.TextBox_id);
-            this.panel1.Controls.Add(this.dataGridView_product);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.Update_button);
             this.panel1.Controls.Add(this.Delete_button);
@@ -291,6 +275,57 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(927, 593);
             this.panel1.TabIndex = 24;
+            // 
+            // dataGridView_category
+            // 
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.dataGridView_category.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView_category.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.dataGridView_category.ColumnHeadersHeight = 24;
+            this.dataGridView_category.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView_category.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dataGridView_category.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridView_category.Location = new System.Drawing.Point(394, 77);
+            this.dataGridView_category.Name = "dataGridView_category";
+            this.dataGridView_category.RowHeadersVisible = false;
+            this.dataGridView_category.Size = new System.Drawing.Size(520, 498);
+            this.dataGridView_category.TabIndex = 24;
+            this.dataGridView_category.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridView_category.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataGridView_category.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataGridView_category.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataGridView_category.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataGridView_category.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridView_category.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridView_category.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dataGridView_category.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView_category.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridView_category.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGridView_category.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridView_category.ThemeStyle.HeaderStyle.Height = 24;
+            this.dataGridView_category.ThemeStyle.ReadOnly = false;
+            this.dataGridView_category.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridView_category.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridView_category.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataGridView_category.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridView_category.ThemeStyle.RowsStyle.Height = 22;
+            this.dataGridView_category.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridView_category.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridView_category.Click += new System.EventHandler(this.dataGridView_category_Click);
             // 
             // TextBox_description
             // 
@@ -312,14 +347,33 @@
             this.TextBox_description.Size = new System.Drawing.Size(200, 31);
             this.TextBox_description.TabIndex = 9;
             // 
+            // button_leave
+            // 
+            this.button_leave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(67)))), ((int)(((byte)(90)))));
+            this.button_leave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_leave.FlatAppearance.BorderSize = 0;
+            this.button_leave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_leave.Font = new System.Drawing.Font("Corbel", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.button_leave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(138)))), ((int)(((byte)(151)))));
+            this.button_leave.Location = new System.Drawing.Point(6, 575);
+            this.button_leave.Name = "button_leave";
+            this.button_leave.Size = new System.Drawing.Size(141, 63);
+            this.button_leave.TabIndex = 30;
+            this.button_leave.Text = "Выход";
+            this.button_leave.UseVisualStyleBackColor = false;
+            this.button_leave.Click += new System.EventHandler(this.button_leave_Click);
+            this.button_leave.MouseEnter += new System.EventHandler(this.button_leave_MouseEnter);
+            this.button_leave.MouseLeave += new System.EventHandler(this.button_leave_MouseLeave);
+            // 
             // Category_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(226)))), ((int)(((byte)(227)))));
             this.ClientSize = new System.Drawing.Size(1100, 650);
+            this.Controls.Add(this.button_leave);
             this.Controls.Add(this.seller_button);
             this.Controls.Add(this.selling_button);
-            this.Controls.Add(this.exit_button);
             this.Controls.Add(this.Product_button);
             this.Controls.Add(this.Button_exit);
             this.Controls.Add(this.panel1);
@@ -327,9 +381,10 @@
             this.Name = "Category_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Category_Form";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_product)).EndInit();
+            this.Load += new System.EventHandler(this.Category_Form_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_category)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -339,9 +394,7 @@
         private Guna.UI2.WinForms.Guna2TextBox TextBox_id;
         private System.Windows.Forms.Button seller_button;
         private System.Windows.Forms.Button selling_button;
-        private System.Windows.Forms.Button exit_button;
         private System.Windows.Forms.Button Product_button;
-        private System.Windows.Forms.DataGridView dataGridView_product;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button Update_button;
         private System.Windows.Forms.Button Delete_button;
@@ -353,5 +406,7 @@
         private Guna.UI2.WinForms.Guna2Button Button_exit;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2TextBox TextBox_description;
+        private Guna.UI2.WinForms.Guna2DataGridView dataGridView_category;
+        private System.Windows.Forms.Button button_leave;
     }
 }
