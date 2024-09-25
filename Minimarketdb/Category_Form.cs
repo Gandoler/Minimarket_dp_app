@@ -206,5 +206,12 @@ namespace Minimarketdb
         {
 
         }
+
+        private void seller_button_Click(object sender, EventArgs e)
+        {
+            Seller_Form seller_Form = new Seller_Form();
+            seller_Form.Show();
+            this.Hide();
+        }
     }
 }

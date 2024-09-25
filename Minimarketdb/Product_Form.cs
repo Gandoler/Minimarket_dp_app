@@ -120,7 +120,9 @@ namespace Minimarketdb
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            Seller_Form seller_Form = new Seller_Form();
+            seller_Form.Show();
+            this.Hide();
         }
 
         private void Button_exit_Click(object sender, EventArgs e)
