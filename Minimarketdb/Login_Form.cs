@@ -65,7 +65,8 @@ namespace Minimarketdb
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+            TextBox_username.Clear();
+            TextBox_password.Clear();
         }
 
         private void Button_clear_MouseEnter(object sender, EventArgs e)
