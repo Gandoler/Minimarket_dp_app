@@ -16,7 +16,7 @@ namespace Minimarketdb
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Category_Form());
+            Application.Run(new Login_Form());
         }
     }
 }

@@ -168,11 +168,6 @@ namespace Minimarketdb
             Button_exit.ForeColor = Color.Black;
         }
 
-        private void exit_button_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void exit_button_MouseEnter(object sender, EventArgs e)
         {
             Button_exit.ForeColor = Color.Red;
@@ -205,6 +200,11 @@ namespace Minimarketdb
             Product_Form product_Form = new Product_Form(); 
             product_Form.Show();
             this.Hide();
+        }
+
+        private void dataGridView_category_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
