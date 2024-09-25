@@ -76,5 +76,11 @@ namespace Minimarketdb
         {
 
         }
+
+        private void Button_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+       
     }
 }
