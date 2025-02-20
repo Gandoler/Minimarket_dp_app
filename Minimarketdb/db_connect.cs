@@ -8,6 +8,7 @@ using System.Data.SqlClient;
 
 namespace Minimarketdb
 {
+//gg
     internal class db_connect
     {
         private SqlConnection SqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\glkru\OneDrive\Документы\minimarket_db.mdf;Integrated Security=True;Connect Timeout=30");
